@@ -1,9 +1,8 @@
 # devops-mini-proj-tdd-greetings
-devops-01-git-wk-01
 
 ## Description
 
-Placeholder project using material ui as styling library.
+
 
 ### Prerequisites
 
