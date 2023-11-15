@@ -31,3 +31,9 @@ test('if name equals Bob', () => {
   const result = greet(name)
   expect(result).toBe('Hello, Bobbidibob.')
 })
+
+test('if name equals JERRY', () => {
+  const name = 'JERRY'
+  const result = greet(name)
+  expect(result).toBe('HELLO, JERRY!')
+})
