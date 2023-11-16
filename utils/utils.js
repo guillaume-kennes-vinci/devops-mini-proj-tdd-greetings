@@ -14,9 +14,26 @@ function greet (name) {
 }
 
 function greetArray (names) {
-  const allButLast = names.slice(0, -1).join(', ')
-  const last = names[names.length - 1]
-  return 'Hello, ' + allButLast + ' and ' + last + '.'
+  var last = names[names.length - 1]
+  var allButLastName = names.slice(0, -1).join(', ')
+  if(last === 'fr') {
+    greeting = 'Bonjour'
+    joinword = 'et'
+    lastName = names[names.length - 2]
+    allButLastName = names.slice(0, -2).join(', ')
+  } else if (last === 'en'){
+    greeting = 'Hello'
+    joinword = 'and'
+    lastName = names[names.length - 2]
+    allButLastName = names.slice(0, -2).join(', ')
+  } else {
+    greeting = 'Hello'
+    joinword = 'and'
+    lastName = names[names.length - 1]
+    allButLastName = names.slice(0, -1).join(', ')
+  }
+
+  return greeting+', ' + allButLastName + ' '+ joinword + ' ' + lastName + '.'
 }
 
 module.exports = { greet }
