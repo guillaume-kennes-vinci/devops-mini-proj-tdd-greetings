@@ -30,7 +30,7 @@ function greetArray (names) {
   return 'Hello, ' + allButLast + ' and ' + last + '.'
 }
 
-function greetCaps (names) {
+function greetCapsIncluded (names) {
   const namesCap = []
   let index = 0
 
@@ -52,4 +52,4 @@ function greetCaps (names) {
   return 'AND HELLO ' + (allButLast.length > 0 ? allButLast + ' AND ' : '') + last + '!'
 }
 
-module.exports = { greet, greetCaps }
+module.exports = { greet, greetCapsIncluded }
