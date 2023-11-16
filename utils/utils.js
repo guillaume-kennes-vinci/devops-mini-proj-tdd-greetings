@@ -13,56 +13,61 @@ function greet (name) {
   }
 }
 
-function greetArrayLanguage (names) {
-  let lastName = names[names.length - 1]
-  let allButLastName = names.slice(0, -1).join(', ')
-  let greeting = 'Hello'
-  let joinword = 'and'
-  if (lastName === 'fr' || lastName === 'en' || lastName === 'nl') {
-    const language = names[names.length - 1]
-    lastName = names[names.length - 2]
-    allButLastName = names.slice(0, -2).join(', ')
-    if (language === 'fr') {
-      greeting = 'Bonjour'
-      joinword = 'et'
-    } else if (language === 'en') {
-      greeting = 'Hello'
-      joinword = 'and'
-    } else if (language === 'nl') {
-      greeting = 'Hallo'
-      joinword = 'en'
-    }
-    return greeting + ', ' + allButLastName + ' ' + joinword + ' ' + lastName + '.'
+function greetArray(name) {
+  let last = name[name.length - 1]
+  if (last === 'fr'||last ==='en'||last ==='nl'){
+    return greetArrayLanguage(name, last)
+  } else {
+    return greetArrayNoLanguage(name)
   }
 }
-function greetArray (names) {
+
+function greetArrayLanguage (name, last) {
+  let lastName = name[name.length - 2]
+  let allButLastName = name.slice(0, -2).join(', ')
+  let greeting = 'Hello'
+  let joinword = 'and'
+  if (last === 'fr') {
+    greeting = 'Bonjour'
+    joinword = 'et'
+  } else if (last === 'nl') {
+    greeting = 'Hallo'
+    joinword = 'en'
+  }
+  return greeting + ', ' + allButLastName + ' ' + joinword + ' ' + lastName + '.'
+}
+
+
+function greetArrayNoLanguage (name) {
   const namesCap = []
   let index = 0
 
-  while (index < names.length) {
-    if (names[index] === names[index].toUpperCase()) {
-      namesCap.push(names[index])
-      names.splice(index, 1)
+  while (index < name.length) {
+    if (name[index] === name[index].toUpperCase()) {
+      namesCap.push(name[index])
+      name.splice(index, 1)
     } else {
       index++
     }
   }
   if (namesCap.length === 0) {
-    return greetLowercaseArray(names)
+    return greetLowercaseArray(name)
+  } else if (name.length === 0){
+    return greetUppercaseArray(namesCap)
   } else {
-    return greetLowercaseArray(names) + ' AND ' + greetUppercaseArray(namesCap)
+    return greetLowercaseArray(name) + ' AND ' + greetUppercaseArray(namesCap)
   }
 }
 
-function greetLowercaseArray (names) {
-  const allButLast = names.slice(0, -1).join(', ')
-  const last = names[names.length - 1]
+function greetLowercaseArray (name) {
+  const allButLast = name.slice(0, -1).join(', ')
+  const last = name[name.length - 1]
   return 'Hello, ' + (allButLast.length > 0 ? allButLast + ' and ' : '') + last + '.'
 }
 
-function greetUppercaseArray (names) {
-  const allButLast = names.slice(0, -1).join(', ')
-  const last = names[names.length - 1]
+function greetUppercaseArray (name) {
+  const allButLast = name.slice(0, -1).join(', ')
+  const last = name[name.length - 1]
   return 'HELLO ' + (allButLast.length > 0 ? allButLast + ' AND ' : '') + last + '!'
 }
 
