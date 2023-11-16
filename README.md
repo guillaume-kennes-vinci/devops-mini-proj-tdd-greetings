@@ -6,7 +6,7 @@ Mini-projet : Hello World
 
 ### Prerequisites
 
-- [Node JS / NPM](https://nodejs.org/en/)
+-   [Node JS / NPM](https://nodejs.org/en/)
 
 ### Installing
 
@@ -24,12 +24,10 @@ Run the test
 npm test
 ```
 
-
 ## Contributors
 
 Contributors names
 
-- Gabriel Crokaert
-- Lionel Janssens
-- Guillaume Kennes
-
+-   Gabriel Crokaert
+-   Lionel Janssens
+-   Guillaume Kennes
