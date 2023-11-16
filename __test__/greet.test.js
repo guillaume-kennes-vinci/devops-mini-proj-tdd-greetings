@@ -92,7 +92,7 @@ test('if there is a language selected and it is nl', () => {
   expect(result).toBe('Hallo, Kratos en Thanatos.')
 })
 
-test('if function greetCaps returns all uppercase names', () => {
+test('if only uppercase names', () => {
   const name = ['AMY', 'BRIAN', 'MARIO']
   const result = greet(name)
   expect(result).toBe('HELLO AMY, BRIAN AND MARIO!')
