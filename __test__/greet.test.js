@@ -43,3 +43,9 @@ test('if name equals JERRified', () => {
   const result = greet(name)
   expect(result).toBe('Hello, JERRified.')
 })
+
+test('if there are 2 names', () => {
+  const name = ['Jill', 'Jane']
+  const result = greet(name)
+  expect(result).toBe('Hello, Jill and Jane.')
+})
