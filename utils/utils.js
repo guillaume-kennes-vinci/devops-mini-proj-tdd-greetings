@@ -13,6 +13,28 @@ function greet (name) {
   }
 }
 
+function greetArrayLanguage (names) {
+  let lastName = names[names.length - 1]
+  let allButLastName = names.slice(0, -1).join(', ')
+  let greeting = 'Hello'
+  let joinword = 'and'
+  if (lastName === 'fr' || lastName === 'en' || lastName === 'nl') {
+    const language = names[names.length - 1]
+    lastName = names[names.length - 2]
+    allButLastName = names.slice(0, -2).join(', ')
+    if (language === 'fr') {
+      greeting = 'Bonjour'
+      joinword = 'et'
+    } else if (language === 'en') {
+      greeting = 'Hello'
+      joinword = 'and'
+    } else if (language === 'nl') {
+      greeting = 'Hallo'
+      joinword = 'en'
+    }
+    return greeting + ', ' + allButLastName + ' ' + joinword + ' ' + lastName + '.'
+  }
+}
 function greetArray (names) {
   const namesCap = []
   let index = 0
@@ -44,4 +66,4 @@ function greetUppercaseArray (names) {
   return 'HELLO ' + (allButLast.length > 0 ? allButLast + ' AND ' : '') + last + '!'
 }
 
-module.exports = { greet }
+module.exports = { greet, greetArrayLanguage }

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-const { greet } = require('../utils/utils.js')
+const { greet, greetArrayLanguage } = require('../utils/utils.js')
 
 test('if no name (void)', () => {
   const name = ''
@@ -78,4 +78,16 @@ test('if function greetCaps returns all uppercase names', () => {
   const name = ['AMY', 'BRIAN', 'Charlotte', 'MARIO']
   const result = greet(name)
   expect(result).toBe('Hello, Charlotte. AND HELLO AMY, BRIAN AND MARIO!')
+})
+
+test('if there is a language selected and it is fr', () => {
+  const name = ['Kratos', 'Thanatos', 'fr']
+  const result = greetArrayLanguage(name)
+  expect(result).toBe('Bonjour, Kratos et Thanatos.')
+})
+
+test('if there is a language selected and it is nl', () => {
+  const name = ['Kratos', 'Thanatos', 'nl']
+  const result = greetArrayLanguage(name)
+  expect(result).toBe('Hallo, Kratos en Thanatos.')
 })
