@@ -30,4 +30,26 @@ function greetArray (names) {
   return 'Hello, ' + allButLast + ' and ' + last + '.'
 }
 
-module.exports = { greet }
+function greetCaps (names) {
+  const namesCap = []
+  let index = 0
+
+  while (index < names.length) {
+    if (names[index] === names[index].toUpperCase()) {
+      namesCap.push(names[index])
+      names.splice(index, 1)
+    } else {
+      index++
+    }
+  }
+  if (namesCap.length === 0) {
+    return null
+  }
+
+  const allButLast = namesCap.slice(0, -1).join(', ')
+  const last = namesCap[namesCap.length - 1]
+
+  return 'AND HELLO ' + (allButLast.length > 0 ? allButLast + ' AND ' : '') + last + '!'
+}
+
+module.exports = { greet, greetCaps }

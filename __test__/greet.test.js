@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-const { greet } = require('../utils/utils.js')
+const { greet, greetCaps } = require('../utils/utils.js')
 
 test('if no name (void)', () => {
   const name = ''
@@ -72,4 +72,10 @@ test('if there are more than 2 names with one in uppercase at the first place', 
   const name = ['AMY', 'Brian', 'Charlotte']
   const result = greet(name)
   expect(result).toBe('Hello, Brian, Charlotte. AND HELLO AMY!')
+})
+
+test('if function greetCaps returns all uppercase names', () => {
+  const names = ['AMY', 'BRIAN', 'Charlotte', 'MARIO']
+  const results = greetCaps(names)
+  expect(results).toBe('AND HELLO AMY, BRIAN AND MARIO!')
 })
