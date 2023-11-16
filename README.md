@@ -26,6 +26,8 @@ npm test
 
 ## Contributors
 
+Group 19
+
 Contributors names
 
 -   Gabriel Crokaert
