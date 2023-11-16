@@ -28,8 +28,6 @@ function greetCapsIncludedArray (names) {
   if (namesCap.length === 0) {
     return greetLowercaseArray(names)
   } else {
-    const allButLastCap = namesCap.slice(0, -1).join(', ')
-    const lastCap = namesCap[namesCap.length - 1]
     return greetLowercaseArray(names) + ' AND ' + greetUppercaseArray(namesCap)
   }
 }
