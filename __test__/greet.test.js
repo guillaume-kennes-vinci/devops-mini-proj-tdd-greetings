@@ -49,3 +49,9 @@ test('if there are 2 names', () => {
   const result = greet(name)
   expect(result).toBe('Hello, Jill and Jane.')
 })
+
+test('if there are more than 2 names', () => {
+  const name = ['Amy', 'Brian', 'Charlotte']
+  const result = greet(name)
+  expect(result).toBe('Hello, Amy, Brian and Charlotte.')
+})
