@@ -61,3 +61,9 @@ test('if there are more than 2 names with one in uppercase at the end', () => {
   const result = greet(name)
   expect(result).toBe('Hello, Amy, Brian. AND HELLO CHARLOTTE!')
 })
+
+test('if there are more than 2 names with one in uppercase at the second place', () => {
+  const name = ['Amy', 'BRIAN', 'Charlotte']
+  const result = greet(name)
+  expect(result).toBe('Hello, Amy, Charlotte. AND HELLO BRIAN!')
+})
