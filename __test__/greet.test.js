@@ -55,3 +55,9 @@ test('if there are more than 2 names', () => {
   const result = greet(name)
   expect(result).toBe('Hello, Amy, Brian and Charlotte.')
 })
+
+test('if there are more than 2 names with onr in uppercase at the end', () => {
+  const name = ['Amy', 'Brian', 'CHARLOTTE']
+  const result = greet(name)
+  expect(result).toBe('Hello, Amy, Brian. AND HELLO CHARLOTTE!')
+})
