@@ -14,7 +14,7 @@ function greet (name) {
 }
 
 function greetArray (names) {
-  const allButLast = names.slice(0, -1)
+  const allButLast = names.slice(0, -1).join(', ')
   const last = names[names.length - 1]
   return 'Hello, ' + allButLast + ' and ' + last + '.'
 }
