@@ -7,7 +7,6 @@ Mini-projet : Hello World
 ### Prerequisites
 
 - [Node JS / NPM](https://nodejs.org/en/)
-- [Material](https://material-components.github.io/material-components-web-catalog/#/)
 
 ### Installing
 
