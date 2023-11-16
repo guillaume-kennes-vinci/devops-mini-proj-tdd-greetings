@@ -2,12 +2,11 @@
 
 ## Description
 
-
+Mini-projet : Hello World
 
 ### Prerequisites
 
 - [Node JS / NPM](https://nodejs.org/en/)
-- [Yarn (optional)](https://yarnpkg.com/)
 - [Material](https://material-components.github.io/material-components-web-catalog/#/)
 
 ### Installing
@@ -18,29 +17,18 @@ Install dependencies
 npm i
 ```
 
-or
-
-```
-yarn
-```
-
 ## Getting Started
 
-Run the app
+Run the test
 
 ```
-npm start
+npm test
 ```
 
-or
-
-```
-yarn start
-```
 
 ## Contributors
 
-Contributors names and contact info
+Contributors names
 
 - Gabriel Crokaert
 - Lionel Janssens
