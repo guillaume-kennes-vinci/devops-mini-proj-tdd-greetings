@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-const { greet, greetCapsIncluded } = require('../utils/utils.js')
+const { greet } = require('../utils/utils.js')
 
 test('if no name (void)', () => {
   const name = ''
@@ -59,23 +59,23 @@ test('if there are more than 2 names', () => {
 test('if there are more than 2 names with one in uppercase at the end', () => {
   const name = ['Amy', 'Brian', 'CHARLOTTE']
   const result = greet(name)
-  expect(result).toBe('Hello, Amy, Brian. AND HELLO CHARLOTTE!')
+  expect(result).toBe('Hello, Amy and Brian. AND HELLO CHARLOTTE!')
 })
 
 test('if there are more than 2 names with one in uppercase at the second place', () => {
   const name = ['Amy', 'BRIAN', 'Charlotte']
   const result = greet(name)
-  expect(result).toBe('Hello, Amy, Charlotte. AND HELLO BRIAN!')
+  expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN!')
 })
 
 test('if there are more than 2 names with one in uppercase at the first place', () => {
   const name = ['AMY', 'Brian', 'Charlotte']
   const result = greet(name)
-  expect(result).toBe('Hello, Brian, Charlotte. AND HELLO AMY!')
+  expect(result).toBe('Hello, Brian and Charlotte. AND HELLO AMY!')
 })
 
 test('if function greetCaps returns all uppercase names', () => {
-  const names = ['AMY', 'BRIAN', 'Charlotte', 'MARIO']
-  const results = greetCapsIncluded(names)
-  expect(results).toBe('AND HELLO AMY, BRIAN AND MARIO!')
+  const name = ['AMY', 'BRIAN', 'Charlotte', 'MARIO']
+  const result = greet(name)
+  expect(result).toBe('Hello, Charlotte. AND HELLO AMY, BRIAN AND MARIO!')
 })

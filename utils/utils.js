@@ -3,7 +3,7 @@
 
 function greet (name) {
   if (Array.isArray(name)) {
-    return greetArray(name)
+    return greetCapsIncludedArray(name)
   } else if (name === '' || name === null || name === undefined) {
     return 'Hello, my friend.'
   } else if (name === name.toUpperCase()) {
@@ -13,24 +13,7 @@ function greet (name) {
   }
 }
 
-function greetArray (names) {
-  const first = names[0]
-  const second = names[1]
-  const last = names[names.length - 1]
-  if (first === first.toUpperCase()) {
-    return 'Hello, ' + second + ', ' + last + '. AND HELLO ' + first + '!'
-  }
-  if (second === second.toUpperCase()) {
-    return 'Hello, ' + first + ', ' + last + '. AND HELLO ' + second + '!'
-  }
-  const allButLast = names.slice(0, -1).join(', ')
-  if (last.toUpperCase() === last) {
-    return 'Hello, ' + allButLast + '. AND HELLO ' + last + '!'
-  }
-  return 'Hello, ' + allButLast + ' and ' + last + '.'
-}
-
-function greetCapsIncluded (names) {
+function greetCapsIncludedArray (names) {
   const namesCap = []
   let index = 0
 
@@ -42,14 +25,15 @@ function greetCapsIncluded (names) {
       index++
     }
   }
+  const allButLast = names.slice(0, -1).join(', ')
+  const last = names[names.length - 1]
   if (namesCap.length === 0) {
-    return null
+    return 'Hello, ' + (allButLast.length > 0 ? allButLast + ' and ' : '') + last + '.'
+  } else {
+    const allButLastCap = namesCap.slice(0, -1).join(', ')
+    const lastCap = namesCap[namesCap.length - 1]
+    return 'Hello, ' + (allButLast.length > 0 ? allButLast + ' and ' : '') + last + '. AND HELLO ' + (allButLastCap.length > 0 ? allButLastCap + ' AND ' : '') + lastCap + '!'
   }
-
-  const allButLast = namesCap.slice(0, -1).join(', ')
-  const last = namesCap[namesCap.length - 1]
-
-  return 'AND HELLO ' + (allButLast.length > 0 ? allButLast + ' AND ' : '') + last + '!'
 }
 
-module.exports = { greet, greetCapsIncluded }
+module.exports = { greet }
