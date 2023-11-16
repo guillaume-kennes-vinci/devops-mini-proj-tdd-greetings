@@ -2,9 +2,8 @@
 /* eslint-disable no-undef */
 
 function greet (name) {
-  if (Array.isArray(name)) {
-    return greetArray(name)
-  } else if (name === '' || name === null || name === undefined) {
+
+  if (name === '' || name === null || name === undefined) {
     return 'Hello, my friend.'
   } else if (name === name.toUpperCase()) {
     return 'HELLO, ' + name + '!'
