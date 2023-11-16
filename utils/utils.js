@@ -25,15 +25,19 @@ function greetCapsIncludedArray (names) {
       index++
     }
   }
-  const allButLast = names.slice(0, -1).join(', ')
-  const last = names[names.length - 1]
   if (namesCap.length === 0) {
-    return 'Hello, ' + (allButLast.length > 0 ? allButLast + ' and ' : '') + last + '.'
+    return greetLowerArray(names)
   } else {
     const allButLastCap = namesCap.slice(0, -1).join(', ')
     const lastCap = namesCap[namesCap.length - 1]
-    return 'Hello, ' + (allButLast.length > 0 ? allButLast + ' and ' : '') + last + '. AND HELLO ' + (allButLastCap.length > 0 ? allButLastCap + ' AND ' : '') + lastCap + '!'
+    return greetLowerArray(names) + ' AND HELLO ' + (allButLastCap.length > 0 ? allButLastCap + ' AND ' : '') + lastCap + '!'
   }
+}
+
+function greetLowerArray (names) {
+  const allButLast = names.slice(0, -1).join(', ')
+  const last = names[names.length - 1]
+  return 'Hello, ' + (allButLast.length > 0 ? allButLast + ' and ' : '') + last + '.'
 }
 
 module.exports = { greet }
