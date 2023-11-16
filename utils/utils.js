@@ -3,7 +3,7 @@
 
 function greet (name) {
   if (Array.isArray(name)) {
-    return greetCapsIncludedArray(name)
+    return greetArray(name)
   } else if (name === '' || name === null || name === undefined) {
     return 'Hello, my friend.'
   } else if (name === name.toUpperCase()) {
@@ -13,7 +13,7 @@ function greet (name) {
   }
 }
 
-function greetCapsIncludedArray (names) {
+function greetArray (names) {
   const namesCap = []
   let index = 0
 
