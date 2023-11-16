@@ -62,8 +62,8 @@ test('if there is a language selected and it is fr', () => {
   expect(result).toBe('Bonjour, Kratos et Thanatos.')
 })
 
-// test('if there is a language selected and it is nl', () => {
-//   const name = ['Kratos', 'Thanatos', 'nl']
-//   const result = greet(name)
-//   expect(result).toBe('Hallo, Kratos en Thanatos.')
-// })
+test('if there is a language selected and it is nl', () => {
+  const name = ['Kratos', 'Thanatos', 'nl']
+  const result = greet(name)
+  expect(result).toBe('Hallo, Kratos en Thanatos.')
+})
