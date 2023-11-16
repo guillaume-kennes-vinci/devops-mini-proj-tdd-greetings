@@ -14,14 +14,14 @@ function greet (name) {
 }
 
 function greetArray (names) {
-  var last = names[names.length - 1]
+  var lastName = names[names.length - 1]
   var allButLastName = names.slice(0, -1).join(', ')
-  if(last === 'fr') {
+  if(lastName === 'fr') {
     greeting = 'Bonjour'
     joinword = 'et'
     lastName = names[names.length - 2]
     allButLastName = names.slice(0, -2).join(', ')
-  } else if (last === 'en'){
+  } else if (lastName === 'en'){
     greeting = 'Hello'
     joinword = 'and'
     lastName = names[names.length - 2]
@@ -29,8 +29,6 @@ function greetArray (names) {
   } else {
     greeting = 'Hello'
     joinword = 'and'
-    lastName = names[names.length - 1]
-    allButLastName = names.slice(0, -1).join(', ')
   }
 
   return greeting+', ' + allButLastName + ' '+ joinword + ' ' + lastName + '.'
