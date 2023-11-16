@@ -55,3 +55,15 @@ test('if there are more than 2 names', () => {
   const result = greet(name)
   expect(result).toBe('Hello, Amy, Brian and Charlotte.')
 })
+
+test('if there is a language selected and it is fr', () => {
+  const name = ['Kratos', 'Thanatos', 'fr']
+  const result = greet(name)
+  expect(result).toBe('Bonjour, Kratos et Thanatos.')
+})
+
+test('if there is a language selected and it is nl', () => {
+  const name = ['Kratos', 'Thanatos', 'nl']
+  const result = greet(name)
+  expect(result).toBe('Hallo, Kratos en Thanatos.')
+})
