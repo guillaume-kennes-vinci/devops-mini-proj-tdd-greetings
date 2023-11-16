@@ -26,18 +26,24 @@ function greetCapsIncludedArray (names) {
     }
   }
   if (namesCap.length === 0) {
-    return greetLowerArray(names)
+    return greetLowercaseArray(names)
   } else {
     const allButLastCap = namesCap.slice(0, -1).join(', ')
     const lastCap = namesCap[namesCap.length - 1]
-    return greetLowerArray(names) + ' AND HELLO ' + (allButLastCap.length > 0 ? allButLastCap + ' AND ' : '') + lastCap + '!'
+    return greetLowercaseArray(names) + ' AND ' + greetUppercaseArray(namesCap)
   }
 }
 
-function greetLowerArray (names) {
+function greetLowercaseArray (names) {
   const allButLast = names.slice(0, -1).join(', ')
   const last = names[names.length - 1]
   return 'Hello, ' + (allButLast.length > 0 ? allButLast + ' and ' : '') + last + '.'
+}
+
+function greetUppercaseArray (names) {
+  const allButLast = names.slice(0, -1).join(', ')
+  const last = names[names.length - 1]
+  return 'HELLO ' + (allButLast.length > 0 ? allButLast + ' AND ' : '') + last + '!'
 }
 
 module.exports = { greet }
