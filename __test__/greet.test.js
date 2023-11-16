@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-const { greet, greetArrayLanguage } = require('../utils/utils.js')
+const { greet } = require('../utils/utils.js')
 
 test('if no name (void)', () => {
   const name = ''
