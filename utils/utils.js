@@ -71,4 +71,4 @@ function greetUppercaseArray (name) {
   return 'HELLO ' + (allButLast.length > 0 ? allButLast + ' AND ' : '') + last + '!'
 }
 
-module.exports = { greet, greetArrayLanguage }
+module.exports = { greet }
