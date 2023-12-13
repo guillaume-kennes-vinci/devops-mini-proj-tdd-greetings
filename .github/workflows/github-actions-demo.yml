@@ -2,11 +2,13 @@ name: pipeline project devops 2 🚀
 on: 
   pull_request:
     types: 
-      - opened
+      - {opened, edited}
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+          - uses: actions/checkout@v4
+
           - name: Les dépendances doivent être installées
             run: npm i
 
