@@ -10,7 +10,7 @@
         "lint:fix": "eslint --fix .",
         "code:fix": "prettier --write . && eslint --fix",
         "commit": "cz",
-        "build": "webpack ./src/app.js -o public/",
+        "build": "webpack ./utils/utils.js -o public/",
         "test": "jest --coverage",
         "test:watch": "jest --watchAll",
         "testjasmine": "jasmine"
