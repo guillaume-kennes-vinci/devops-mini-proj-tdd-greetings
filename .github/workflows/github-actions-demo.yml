@@ -1,0 +1,32 @@
+name: pipeline project devops 2 🚀
+on: 
+  pull_request:
+    types: 
+      - opened
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+          - name: Les dépendances doivent être installées
+            run: npm i
+
+          - name: Une première étape indiquant l'heure de commencement de la pipeline doit être affichée
+            run: echo "Le pipeline a commencé a $(date)"
+
+          - name: Le code doit être "formatté" correctement (Prettier)
+            run: npm run code:fix
+
+          - name: Le code doit être "linté" correctement (Lint)
+            run: npm run code:fix
+
+          - name: Le code doit être "testé" correctement ET le coverage doit être au-dessus de 80% (Jest)
+            run: npm run test
+
+          - name: Le code doit être "buildé" correctement
+            run: npm run build
+
+          - name: Une étape indiquant l'heure de fin de la pipeline doit être affichée
+            run: echo "Le pipeline s'est terminé a $(date)"
+
+          - name: Une étape indiquant le string suivant "PIPELINE SUCCESS WITHOUT ERRORS" doit être affichée
+            run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
