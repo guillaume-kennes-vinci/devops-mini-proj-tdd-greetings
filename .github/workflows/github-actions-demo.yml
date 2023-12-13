@@ -2,7 +2,8 @@ name: pipeline project devops 2 🚀
 on: 
   pull_request:
     types: 
-      - [opened, edited]
+      - opened
+      - edited
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
