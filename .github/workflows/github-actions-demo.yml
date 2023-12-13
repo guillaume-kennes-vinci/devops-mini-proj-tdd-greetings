@@ -7,7 +7,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-          - uses: actions/checkout@v4
+          - uses: actions/checkout@v4 
 
           - name: Les dépendances doivent être installées
             run: npm i
