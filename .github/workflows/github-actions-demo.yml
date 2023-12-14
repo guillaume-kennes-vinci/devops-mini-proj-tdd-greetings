@@ -33,4 +33,3 @@ jobs:
 
           - name: Une étape indiquant le string suivant "PIPELINE SUCCESS WITHOUT ERRORS" doit être affichée
             run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
-
