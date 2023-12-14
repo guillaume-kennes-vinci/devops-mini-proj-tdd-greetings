@@ -35,6 +35,7 @@ Contributors names
 -   Guillaume Kennes
 
 ## Link to the repository
+
 https://github.com/guillaume-kennes-vinci/devops-mini-proj-tdd-greetings
 
 ## Questions
