@@ -56,9 +56,10 @@ Le "on" est un trigger qui se déclenche à chaque action spécifié (ici sur un
 Le “on push”  désigne simplement que le pipeline va s'effectuer à chaque push du code et “on pull request” désigne que le pipeline s'effectuera sur les pull requests.
 Nous conseillons aux développeurs juniors de de'utiliser le “on pull request” car les changements, étant sur une autre branche, sont isolés et nécessite une confirmation avant d'être appliqués sur la branche main, ce qui évite les fusions trop hatives et facilite la collaboration entre développeurs. De plus, la pipeline permetra une vérification sur le code et le workflow associé à "on pull_request" offre une vérification du code et un feedback immédiat, contribuant ainsi à une meilleure qualité du code.
 ```
-- Quelle est la différence entre run et run_on ?  Expliquez par rapport à votre pipeline.  
+- Quelle est la différence entre run et runs_on ?  Expliquez par rapport à votre pipeline.  
 ```bash 
-<votre réponse ici>
+"run" est le mot-clé qui est utilisé à chaque étape et qui précise la commande ou le script qui doit être exécuté. Il est utilisé pour définir les actions : installer les dépendances avec npm i par exemple.
+"runs_on" est le mot-clé utilisé pour définir l'environnement virtuel (OS) dans lequel le job va s'effectuer. Dans notre pipeline le code va s'effectuer dans un environnement Ubuntu.
 ```
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline. 
 ```bash
@@ -71,5 +72,6 @@ Oui, les étapes peuvent être interverties, mais pas de manière aléatoire car
 ```
 - Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ?  Quelles questions devriez-vous vous poser ? 
 ```bash
-<votre réponse ici>
+Pour ajouter un test de sécurité dans mon pipeline, je dois être sûr que les dépendances du programme secure_app soient correctement installées. Sinon je les installe via "run". Ensuite je dois exécuter le programme. Finalement je peux traiter les résultats du test si nécessaire.
+Les questions que je dois toujours me poser avant d'utiliser un programmem sont : Est-ce que le programme est installé? ; Comment exécuter le programme? ; Est-ce que je veux traiter les résultats?
 ```
