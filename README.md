@@ -34,6 +34,9 @@ Contributors names
 -   Lionel Janssens
 -   Guillaume Kennes
 
+## Link to the repository
+https://github.com/guillaume-kennes-vinci/devops-mini-proj-tdd-greetings
+
 ## Questions
 
 - Décrivez brièvement ce que fait votre fichier YML.  
